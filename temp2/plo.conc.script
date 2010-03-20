@@ -1,0 +1,28 @@
+set size 1,1
+set terminal jpeg size 1024,600
+ set title 'Conc field of asteroid counterflow'
+set border
+ set format x ''
+ set format y ''
+set pm3d map
+set palette rgbformulae -3,-3,-3
+set xtics nomirror
+set ytics nomirror
+unset mx2tics 
+unset my2tics
+unset x2tics 
+unset y2tics
+unset xtics
+ unset ytics
+unset xlabel 
+unset ylabel
+set output 'conc/pic/0000.jpg'
+splot 'conc/0/0.txt' matrix with pm3d notitle 
+set output 'conc/pic/0001.jpg'
+splot 'conc/0/10.txt' matrix with pm3d notitle 
+set output 'conc/pic/0002.jpg'
+splot 'conc/0/20.txt' matrix with pm3d notitle 
+set output 'conc/pic/0003.jpg'
+splot 'conc/0/30.txt' matrix with pm3d notitle 
+set output 'conc/pic/0004.jpg'
+splot 'conc/0/40.txt' matrix with pm3d notitle 
